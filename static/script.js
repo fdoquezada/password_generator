@@ -1,0 +1,40 @@
+function generatePassword() {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+    let password = "";
+    for (let i = 0; i < 12; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    document.getElementById("password").value = password;
+}
+
+function savePassword() {
+    const password = document.getElementById("password").value;
+    if (password) {
+        let passwords = JSON.parse(localStorage.getItem("passwords")) || [];
+        passwords.push(password);
+        localStorage.setItem("passwords", JSON.stringify(passwords));
+        displayVault();
+    }
+}
+
+function displayVault() {
+    const vault = document.getElementById("vault");
+    vault.innerHTML = "";
+    let passwords = JSON.parse(localStorage.getItem("passwords")) || [];
+    passwords.forEach((pwd, index) => {
+        vault.innerHTML += `<li>${pwd} <button onclick="deletePassword(${index})">Eliminar</button></li>`;
+    });
+}
+
+function deletePassword(index) {
+    let passwords = JSON.parse(localStorage.getItem("passwords")) || [];
+    passwords.splice(index, 1);
+    localStorage.setItem("passwords", JSON.stringify(passwords));
+    displayVault();
+}
+
+function clearPassword() {
+    document.getElementById("password").value = "";
+}
+
+window.onload = displayVault;

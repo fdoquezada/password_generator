@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="icon" href="static/img/encerrar.png">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="marquee-container">
+            <h1 class="marquee">Generador de Contraseñas</h1>
+        </div>
+        <input type="text" id="password" readonly>
+        <button onclick="generatePassword()">Generar</button>
+        <button onclick="savePassword()">Guardar</button>
+        <button onclick="clearPassword()">Limpiar</button>
+
+        <h2>Bóveda de Contraseñas</h2>
+        <ul id="vault"></ul>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <!-- Columna de información -->
+            <div class="footer-section">
+                <h5>Sobre Mi</h5>
+                <p>Soy Desarrollador en Python con Django y JavaScript, especializado en Node.js. Con experiencia en administración, Recursos Humanos y Leyes Sociales.</p>
+                <p>
+                    <i class="bi bi-geo-alt-fill"></i> Dirección: Cañada San Andres1075, San Felipe<br>
+                    <i class="bi bi-telephone-fill"></i> Teléfono: +56999516681<br>
+                    <i class="bi bi-envelope-fill"></i> Email: fdoquezadapuno@gmail.com
+                </p>
+            </div>
+    
+            <!-- Columna de enlaces rápidos -->
+            <div class="footer-section">
+                <h5>Enlaces Rápidos</h5>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+    
+            <!-- Columna de redes sociales -->
+            <div class="footer-section">
+                <h5>Síguenos</h5>
+                <div class="social-links">
+                    <a href="https://github.com/fdoquezada" target="_blank">GitHub</a>
+                    <a href="https://www.facebook.com/audas69/" target="_blank">Facebook</a>
+                    <a href="https://x.com" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com/elferna_2/" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com/in/fernandoquezadapuno/" target="_blank">LinkedIn</a>
+                    <a href="https://www.youtube.com/@fernandoquezada5696" target="_blank">YouTube</a>
+                </div>
+                <div class="newsletter-form">
+                    <h6>Newsletter</h6>
+                    <input type="email" placeholder="Tu email">
+                    <button type="button">Suscribir</button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 Desarrollador webs. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="static/script.js"></script>
+</body>
+</html>
