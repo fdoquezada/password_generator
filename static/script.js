@@ -37,4 +37,18 @@ function clearPassword() {
     document.getElementById("password").value = "";
 }
 
+function copyPassword() {
+    const passwordInput = document.getElementById("password");
+    if (passwordInput.value) {
+        navigator.clipboard.writeText(passwordInput.value)
+            .then(() => {
+                // Opcional: feedback visual
+                alert("¡Contraseña copiada al portapapeles!");
+            })
+            .catch(() => {
+                alert("No se pudo copiar la contraseña.");
+            });
+    }
+}
+
 window.onload = displayVault;

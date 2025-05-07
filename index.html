@@ -14,6 +14,9 @@
             <h1 class="marquee">Generador de Contraseñas</h1>
         </div>
         <input type="text" id="password" readonly>
+        <button class="btn btn-outline-secondary" onclick="copyPassword()" title="Copiar contraseña">
+            <i class="bi bi-clipboard"></i> Copiar
+        </button>
         <button class="btn btn-primary" onclick="generatePassword()">Generar</button>
         <button class="btn btn-success" onclick="savePassword()">Guardar</button>
         <button class="btn btn-secondary" onclick="clearPassword()">Limpiar</button>
