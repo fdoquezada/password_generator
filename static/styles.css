@@ -19,6 +19,42 @@ body {
     flex: 1;
 }
 
+/* Estilos específicos para el formulario en el footer */
+.footer-section form {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.footer-section .form-control-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.footer-section .form-control-sm::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-section .btn-outline-light {
+    border-color: rgba(255,255,255,0.5);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footer-section .btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Estilos para la respuesta del formulario en footer */
+#footerFormResponse .alert {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
 /* ... (mantener los estilos existentes del marquee y botones) ... */
 
 /* Nuevos estilos para el footer */

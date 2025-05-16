@@ -50,5 +50,43 @@ function copyPassword() {
             });
     }
 }
-
+document.getElementById('footerContactForm')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    
+    submitButton.textContent = 'Enviando...';
+    submitButton.disabled = true;
+    
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
+        
+        const responseElement = document.getElementById('footerFormResponse');
+        
+        if (response.ok) {
+            responseElement.innerHTML = `
+                <div class="alert alert-success">
+                    ¡Mensaje enviado!
+                </div>
+            `;
+            form.reset();
+        } else {
+            throw new Error('Error al enviar');
+        }
+    } catch (error) {
+        document.getElementById('footerFormResponse').innerHTML = `
+            <div class="alert alert-danger">
+                Error al enviar
+            </div>
+        `;
+    } finally {
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
+    }
+});
 window.onload = displayVault;

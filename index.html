@@ -22,22 +22,19 @@
         <button class="btn btn-secondary" onclick="clearPassword()">Limpiar</button>
         <br>
         <br>
-        
-     
-
         <h2>Bóveda de Contraseñas</h2>
         
         <ul id="vault"></ul>
-        
-    </div>
-    <footer>
+    </div>  
+    <footer>  
+        </div>
         <div class="footer-content">
             <!-- Columna de información -->
-            <div class="footer-section">
+            <div class footer="footer-section">
                 <h5>Sobre Mi</h5>
                 <p>Soy Desarrollador en Python con Django y JavaScript, especializado en Node.js. Con experiencia en administración, Recursos Humanos y Leyes Sociales.</p>
                 <p>
-                    <i class="bi bi-geo-alt-fill"></i> Dirección: Cañada San Andres1075, San Felipe<br>
+                    <i class="bi bi-geo-alt-fill"></i>  San Felipe<br>
                     <i class="bi bi-telephone-fill"></i> Teléfono: +56999516681<br>
                     <i class="bi bi-envelope-fill"></i> Email: fdoquezadapuno@gmail.com
                 </p>
@@ -54,7 +51,6 @@
                 </ul>
             </div>
     
-            <!-- Columna de redes sociales -->
             <div class="footer-section">
                 <h5>Sígueme</h5>
                 <div class="social-links">
@@ -65,10 +61,22 @@
                     <a href="https://www.linkedin.com/in/fernandoquezadapuno/" target="_blank">LinkedIn</a>
                     <a href="https://www.youtube.com/@fernandoquezada5696" target="_blank">YouTube</a>
                 </div>
-                <div class="newsletter-form">
-                    <h6>Newsletter</h6>
-                    <input type="email" placeholder="Tu email">
-                    <button type="button">Suscribir</button>
+                
+                <div class="footer-section">
+                    <h5>Contáctame</h5>
+                    <form id="footerContactForm" action="https://formspree.io/f/xblowyzz" method="POST">
+                        <div class="mb-2">
+                            <input type="text" class="form-control form-control-sm" name="name" placeholder="Nombre" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="email" class="form-control form-control-sm" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="mb-2">
+                            <textarea class="form-control form-control-sm" name="message" rows="2" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-outline-light w-100">Enviar</button>
+                    </form>
+                    <div id="footerFormResponse" class="small mt-2"></div>
                 </div>
             </div>
         </div>
