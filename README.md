@@ -64,7 +64,7 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir los c
 
 ## Autor
 
-[Tu Nombre]
+[Fernando Quezada Puño]
 
 ## Versión
 
